@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트 상세 | FUTUREVEL</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #181C20;
+      margin: 0;
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      color: #F5F7FA;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+    }
+    .project-layout {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 0 0 56px 0;
+    }
+    .project-sidenav {
+      position: sticky;
+      top: 48px;
+      align-self: flex-start;
+      min-width: 140px;
+      max-width: 180px;
+      background: none;
+      border: none;
+      margin: 100px 56px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .project-sidenav a {
+      color: #b0b8c1;
+      font-weight: 500;
+      font-size: 1.09rem;
+      text-decoration: none;
+      padding: 10px 0 10px 0;
+      border-radius: 0;
+      background: none;
+      transition: color 0.15s;
+      margin: 0;
+      display: block;
+      letter-spacing: -0.01em;
+    }
+    .project-sidenav a.active {
+      color: #42a5f5;
+      font-weight: 700;
+      font-size: 1.18rem;
+    }
+    .project-main {
+      flex: 1;
+      padding: 100px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .project-detail-section {
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0 0 72px 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-bottom: 1.5px solid #23272B;
+    }
+    .project-detail-section:last-child {
+      border-bottom: none;
+    }
+    .project-detail-header {
+      display: flex;
+      align-items: flex-end;
+      gap: 40px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .project-detail-img {
+      width: 170px;
+      border-radius: 10px;
+      box-shadow: none;
+      background: #23272B;
+      border: 1.5px solid #23272B;
+    }
+    .project-detail-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #F5F7FA;
+      letter-spacing: -0.03em;
+      line-height: 1.18;
+    }
+    .project-slogan {
+      font-size: 1.22rem;
+      color: #42a5f5;
+      margin-bottom: 20px;
+      font-weight: 500;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      display: block;
+      box-shadow: none;
+      line-height: 1.5;
+    }
+    .project-detail-tags {
+      margin-bottom: 0;
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+    }
+    .project-detail-tags span {
+      background: #23272B;
+      color: #42a5f5;
+      border-radius: 16px;
+      padding: 3px 13px;
+      font-size: 1.08rem;
+      font-weight: 500;
+      border: 1.2px solid #42a5f5;
+      margin-right: 0;
+      letter-spacing: 0;
+      transition: background 0.15s, color 0.15s;
+    }
+    .project-detail-tags span:hover {
+      background: #23272B;
+      color: #fff;
+      border-color: #42a5f5;
+    }
+    .project-detail-desc {
+      font-size: 1.13rem;
+      color: #fff;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+    .project-detail-section h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #42a5f5;
+    }
+    .project-detail-features {
+      list-style: disc;
+      margin-left: 20px;
+      color: #fff;
+      font-size: 1.01rem;
+      line-height: 1.7;
+    }
+    .project-detail-block {
+      margin-bottom: 36px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .project-detail-block:last-child {
+      border-bottom: none;
+    }
+    .project-detail-block h3 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+    .project-detail-block ul {
+      margin-left: 18px;
+      padding-left: 0;
+      list-style: disc;
+      color: #fff;
+      font-size: 1.01rem;
+      line-height: 1.7;
+    }
+    .project-detail-block ul li {
+      margin-bottom: 4px;
+      padding-left: 0;
+      position: static;
+    }
+    .project-detail-block ul li:before {
+      display: none;
+    }
+    .project-detail-block p {
+      font-size: 1.01rem;
+      color: #fff;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    .project-detail-block b {
+      color: #fff;
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .project-layout { flex-direction: column; padding: 0 0 32px 0; }
+      .project-sidenav { flex-direction: row; position: static; width: 100%; min-width: 0; max-width: 100%; margin: 0 0 24px 0; border-radius: 0; padding: 0; justify-content: flex-start; gap: 18px; }
+      .project-sidenav a { border-radius: 0; padding: 8px 0; font-size: 1rem; }
+      .project-main { padding: 0; }
+      .project-detail-header { gap: 18px; }
+    }
+    @media (max-width: 600px) {
+      .project-detail-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .project-detail-img { width: 100%; max-width: 180px; }
+      .project-detail-section { padding: 0 0 36px 0; }
+      .project-detail-title { font-size: 1.2rem; }
+    }
+    .project-back-btn-wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 36px;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .project-back-btn {
+      color: #fff;
+      background: #23272B;
+      border-radius: 18px;
+      padding: 8px 22px;
+      font-size: 1.13rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(36,54,85,0.10);
+      border: 1.2px solid #3b82f6;
+      transition: background 0.15s, color 0.15s, border 0.15s;
+      display: inline-block;
+    }
+    .project-back-btn:hover {
+      background: #3b82f6;
+      color: #fff;
+      border-color: #60a5fa;
+    }
+    .project-box {
+      background: #23272B;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(36,54,85,0.10);
+      padding: 48px 40px 40px 40px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    @media (max-width: 900px) {
+      .project-back-btn-wrap { padding-top: 18px; }
+      .project-box { padding: 28px 10px 24px 10px; border-radius: 10px; }
+    }
+  </style>
+  <script>
+    function showProjectSection(hash) {
+      const ids = ['whereclass', 'mochong'];
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = (hash === '#' + id) ? 'block' : 'none';
+      });
+    }
+    window.addEventListener('DOMContentLoaded', function() {
+      function setActiveNav() {
+        const hash = window.location.hash || '#whereclass';
+        document.querySelectorAll('.project-sidenav a').forEach(a => {
+          if(a.getAttribute('href') === hash) a.classList.add('active');
+          else a.classList.remove('active');
+        });
+        showProjectSection(hash);
+      }
+      setActiveNav();
+      window.addEventListener('hashchange', setActiveNav);
+    });
+  </script>
+</head>
+<body>
+  <div class="project-layout">
+    <nav class="project-sidenav">
+      <a href="index.html" style="margin-bottom:18px; color:#42a5f5; font-weight:700; font-size:1.13rem; text-decoration:none; background:none; border:none; border-radius:0; box-shadow:none; padding:10px 0 10px 0; display:block;">← FUTUREVEL 홈으로</a>
+      <a href="#whereclass">어디수업</a>
+      <a href="#mochong">모두의 총무</a>
+    </nav>
+    <main class="project-main">
+      <!-- 어디수업 상세 -->
+      <section class="project-detail-section project-box" id="whereclass">
+        <div class="project-detail-header">
+          <img src="project-images/whereclass.png" alt="어디수업 스크린샷" class="project-detail-img">
+          <div>
+            <div class="project-detail-title">어디수업 (whereclass)</div>
+            <div class="project-slogan">
+              복잡한 캠퍼스, 더 이상 헤매지 마세요.<br>
+              당신의 다음 수업은 <b>어디수업</b>이 알려줄게요.
+            </div>
+            <div class="project-detail-tags">
+              <span>#Mobile App</span><span>#ProductManagement</span><span>#Flutter</span><span>#Problem Solving</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-detail-block">
+          <h3>프로젝트 이야기 (About Project)</h3>
+          <p>새 학기 첫날, 강의실을 찾지 못해 땀 흘리며 뛰어다닌 경험, 다들 한 번쯤 있지 않나요? 분명 지도는 보고 있는데, 내가 어디에 있는지, 어느 방향으로 가야 할지 몰라 막막했던 순간들이 있었습니다.<br><br>
+          '어디수업'은 바로 이 경험에서 시작되었습니다. 우리는 복잡한 건물 내부 구조와 불친절한 안내 표지판 때문에 길을 헤매는 학우들의 고질적인 문제를 해결하고자 합니다. 더 이상 강의실을 찾느라 시간을 낭비하거나, 중요한 수업에 늦는 일이 없도록, 가장 직관적이고 똑똑한 캠퍼스 실내 지도 앱을 만들기로 했습니다.<br><br>
+          우리의 목표는 단순한 '도면 뷰어'가 아닙니다. 사용자의 입장에서 지도를 재설계하고, 길찾기에 필수적인 정보만을 담아, 누구나 쉽게 길을 찾을 수 있는 <b>'가장 스마트한 캠퍼스 네비게이터'</b>를 제공하는 것입니다.<br><br>
+          <b>타겟 유저:</b> 강의실 위치에 익숙하지 않은 신입생, 복학생, 방문객 및 모든 학우</p>
+        </div>
+        <div class="project-detail-block">
+          <h3>주요 기능 (Key Features)</h3>
+          <ul>
+            <li><b>시각적이고 직관적인 실내 지도</b> - 건축 도면을 그대로 옮긴 복잡한 지도가 아닌, 길찾기에 불필요한 정보는 과감히 생략하고 경로, 강의실, 주요 랜드마크(계단, 화장실 등)를 강조한 깔끔하고 이해하기 쉬운 지도를 제공합니다.</li>
+            <li><b>통합 검색 기능</b> - 강의실 번호나 이름, 별칭 등 어떤 키워드로 검색하더라도 원하는 강의실을 빠르고 정확하게 찾아줍니다.</li>
+            <li><b>나침반을 활용한 방향 안내</b> - GPS가 없는 실내에서도 스마트폰의 나침반 센서를 활용해 사용자가 현재 어느 방향을 보고 있는지 화살표로 알려주어, 지도와 현실의 방향을 쉽게 일치시킬 수 있도록 돕습니다.</li>
+            <li><b>편의 기능 (더보기 탭)</b> - 자주 가는 강의실을 저장하는 '즐겨찾기', 이전에 찾았던 장소를 보여주는 '최근 검색 기록', 그리고 앱 소식을 전하는 <b>'공지사항'</b>과 '문의하기' 기능을 제공하여 사용자 편의성을 높입니다.</li>
+          </ul>
+        </div>
+        <div class="project-detail-block">
+          <h3>로고 컨셉 (Logo Concept)</h3>
+          <p>돋보기 🔍 + 학사모 🎓<br>
+          '검색'이라는 앱의 핵심 기능과 '성공적인 학업'이라는 최종 목표를 결합했습니다. 이 로고는 <b>"내가 원하는 수업(학사모)을 능동적으로 검색하고 찾아 나선다"</b>는 의미를 담고 있습니다. 사용자가 단순히 길을 찾는 것을 넘어, 자신의 학업 여정을 주도적으로 설계하고 성공적으로 완수하기를 응원하는 저희 서비스의 철학을 나타냅니다.</p>
+        </div>
+        <div class="project-detail-block">
+          <h3>기술 스택 (Tech Stack)</h3>
+          <ul>
+            <li><b>Frontend:</b> Flutter</li>
+            <li><b>Backend & DB:</b> Firebase (Cloud Firestore, Cloud Functions, Storage)</li>
+            <li><b>Design & Data:</b> Figma (UI Design, SVG Vector Map)</li>
+          </ul>
+        </div>
+        <div class="project-detail-block">
+          <h3>팀 구성 (Team)</h3>
+          <!-- 팀원 표/리스트 등 추가 가능 -->
+        </div>
+      </section>
+      <!-- 모두의 총무 상세 -->
+      <section class="project-detail-section project-box" id="mochong">
+        <div class="project-detail-header">
+          <img src="project-images/mochong.png" alt="모두의 총무 스크린샷" class="project-detail-img">
+          <div>
+            <div class="project-detail-title">모두의 총무 (mochong)</div>
+            <div class="project-slogan">
+              총무의 복잡한 정산과 회계 업무를 자동화하는 간편 금융 솔루션입니다.
+            </div>
+            <div class="project-detail-tags">
+              <span>#FIN:NECT 챌린지</span><span>#LeanStartup</span><span>#Prototyping</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-detail-block">
+          <h3>프로젝트 이야기 (About Project)</h3>
+          <p>모두의 총무는 모임, 동아리, 소규모 단체 등에서 반복되는 복잡한 정산과 회계 업무를 자동화하고, 누구나 쉽게 사용할 수 있는 간편 금융 솔루션을 목표로 시작되었습니다.<br><br>
+          기존의 수기 장부, 엑셀, 카카오톡 송금 내역 등 여러 도구를 번갈아가며 사용하던 불편함을 해결하고, 투명하고 효율적인 회계 관리를 지원합니다.<br><br>
+          <b>타겟 유저:</b> 모임 총무, 동아리/스터디 리더, 회계 담당자, 정산이 필요한 모든 사용자</p>
+        </div>
+        <div class="project-detail-block">
+          <h3>주요 기능 (Key Features)</h3>
+          <ul>
+            <li><b>자동 정산 및 회계 내역 관리</b> - 모임별로 발생하는 수입/지출 내역을 자동으로 집계하고, 실시간으로 잔액과 내역을 확인할 수 있습니다.</li>
+            <li><b>간편 송금/청구, 정산 내역 공유</b> - 멤버별 송금 요청, 정산 내역을 카카오톡 등으로 쉽게 공유할 수 있습니다.</li>
+            <li><b>시각화된 현황판</b> - 잔액, 지출, 수입 현황을 그래프 등으로 한눈에 파악할 수 있습니다.</li>
+            <li><b>모바일 친화적 UI/UX</b> - 누구나 쉽게 사용할 수 있는 직관적인 인터페이스를 제공합니다.</li>
+          </ul>
+        </div>
+        <div class="project-detail-block">
+          <h3>기술 스택 (Tech Stack)</h3>
+          <ul>
+            <li><b>Frontend:</b> Flutter</li>
+            <li><b>Backend & DB:</b> Firebase (Cloud Firestore, Cloud Functions, Storage)</li>
+            <li><b>Design & Data:</b> Figma (UI Design, Data Visualization)</li>
+          </ul>
+        </div>
+        <div class="project-detail-block">
+          <h3>팀 구성 (Team)</h3>
+          <!-- 팀원 표/리스트 등 추가 가능 -->
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html> 
