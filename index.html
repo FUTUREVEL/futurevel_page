@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리 팀 랜딩페이지</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-logo">
+        <a href="#hero">
+          <img src="futurevel_logo.svg" alt="futurevel 로고" style="height:38px; width:auto; display:block;">
+        </a>
+      </div>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="메뉴 열기">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#mission">Culture</a></li>
+        <li><a href="#works">Product</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#join">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section id="hero" class="section-animate">
+    <div class="hero-bg">
+      <canvas id="particles"></canvas>
+      <!-- 배경 영상 제거됨 -->
+    </div>
+    <div class="hero-content">
+      <h2 class="hero-headline">더 나은 미래를 위한 수준 높은 도전</h2>
+      <h1>진짜 문제를 해결합니다.</h1>
+      <h3>우리는 1%라도 세상을 바꾸기 위해, 실패를 두려워하지 않고 나아갑니다.</h3>
+    </div>
+    <div class="scroll-down">
+      <span class="arrow"></span>
+    </div>
+  </section>
+
+  <!-- SECTION: VISION (추가) -->
+  <section id="vision" class="section-animate">
+    <div class="vision-inner">
+      <h2 style="color:#fff;font-size:2.8rem;font-weight:700;margin-bottom:24px;letter-spacing:-1px;">세상을 바꾸는 위대한 1%</h2>
+      <p>
+        세상을 한 번에 바꾸는 혁신은 쉽게 오지 않습니다. 하지만 우리는 믿습니다. 일상의 불편함을 1% 개선하는 작은 시도들이 모여, 결국 세상을 움직이는 거대한 동력이 됨을.<br><br>
+        우리의 목표는 날마다 1%의 의미 있는 전진을 만들어내는 것입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION (팀 소개) -->
+  <section id="about" class="about-section about-simple">
+    <div class="about-img about-img-center">
+      <img src="futurevel_logo.svg" alt="FUTUREVEL 로고">
+    </div>
+    <div class="about-text about-text-center">
+      <p>
+        FUTUREVEL은 연세대학교 미래캠퍼스 학생 창업팀으로,<br>
+        학생들의 불편함을 해결하는 서비스로 시작해<br>
+        이 사회의 문제를 해결하고, 더 나은 세상을 만들고자 모였습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OUR MISSION -->
+  <section id="mission" class="section-animate">
+    <h2>우리는 이렇게 일합니다</h2>
+    <div class="mission-list">
+      <div class="mission-item">
+        <span class="icon">🧠</span>
+        <div>
+          <h4>자율과 책임감을 바탕으로 성장합니다.</h4>
+          <p>각자의 판단을 존중하고 주도적으로 업무를 수행합니다. 모든 과정에서 서로를 신뢰하며, 함께 만들어낸 결과에 대해 공동의 책임감을 가집니다.</p>
+        </div>
+      </div>
+      <div class="mission-item">
+        <span class="icon">🔍</span>
+        <div>
+          <h4>사용자 경험에 깊이 몰입합니다.</h4>
+          <p>모든 문제의 답은 사용자에게 있다고 믿습니다. 저희는 단순히 '괜찮은' 해결책에 만족하지 않고, 사용자의 본질적인 니즈를 파악하기 위해 집요하게 고민하고 탐구하며 최적의 솔루션을 찾아냅니다.</p>
+        </div>
+      </div>
+      <div class="mission-item">
+        <span class="icon">↗️</span>
+        <div>
+          <h4>과감한 도전으로 성장을 이룹니다.</h4>
+          <p>저희는 '이것이 가능할까?'라는 질문 대신, '어떻게 하면 가능하게 만들까?'를 고민합니다. 성공적인 결과뿐만 아니라, 의미 있는 실패의 과정에서도 배우고 성장하며 끊임없이 새로운 시도를 이어갑니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: OUR WORKS -->
+  <section id="works" class="section-animate">
+    <h2>세상을 바꾼 1%의 증거들</h2>
+    <div class="works-slider">
+      <div class="work-card">
+        <img src="project-images/whereclass.png" class="project-full-img" alt="어디수업 스크린샷">
+        <div class="work-overlay">
+          <div class="work-title">어디수업</div>
+          <div class="tags">
+            <span>#Mobile App</span><span>#ProductManagement</span><span>#Flutter</span><span>#Problem Solving</span>
+          </div>
+          <div class="work-desc">헤매지 않는 캠퍼스 라이프를 위한 내 손안의 지도. 매 학기 반복되는 강의실 찾기 문제를 해결합니다.</div>
+          <a href="#" class="view-project">View Project <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="project-images/mochong.png" class="project-full-img" alt="모두의 총무 스크린샷">
+        <div class="work-overlay">
+          <div class="work-title">모두의 총무</div>
+          <div class="tags">
+            <span>#FIN:NECT 챌린지</span><span>#LeanStartup</span><span>#Prototyping</span>
+          </div>
+          <div class="work-desc">총무의 복잡한 정산과 회계 업무를 자동화하는 간편 금융 솔루션입니다.</div>
+          <a href="#" class="view-project">View Project <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: OUR TEAM -->
+  <section id="team" class="section-animate">
+    <h2>OUR TEAM</h2>
+    <div class="team-grid">
+      <!-- Founder -->
+      <div class="team-member founder">
+        <div class="profile-pic" style="background-image:url('team_photos/choeunho.jpg');"></div>
+        <div class="member-info">
+          <h4>최은호 <span>Founder & Leader</span></h4>
+          <p>agho@yonsei.ac.kr</p>
+          <div class="member-links">
+            <a href="https://github.com/aghobiz" target="_blank" aria-label="GitHub">
+              <svg width="24" height="24" fill="currentColor"><use href="#github-icon"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aghoc" target="_blank" aria-label="LinkedIn">
+              <svg width="24" height="24" fill="currentColor"><use href="#linkedin-icon"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Co-Founder -->
+      <div class="team-member cofounder">
+        <div class="profile-pic" style="background-image:url('team_photos/kimtaekhoon.jpg');"></div>
+        <div class="member-info">
+          <h4>김택훈 <span>Co-Founder</span></h4>
+          <p>rltnf10606@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 1 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/hwangdohyun.jpg');"></div>
+        <div class="member-info">
+          <h4>황도현 <span>Backend Developer</span></h4>
+          <p>ezwez1467@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 2 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/jominhyung.jpg');"></div>
+        <div class="member-info">
+          <h4>조민형 <span>Frontend Developer</span></h4>
+          <p>alexmcho0103@gmail.com</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 3 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/kimtaeuk.jpg');"></div>
+        <div class="member-info">
+          <h4>김태욱 <span>Backend Developer</span></h4>
+          <p>air2039@naver.com</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 4 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/leechaeyeon.jpg');"></div>
+        <div class="member-info">
+          <h4>이채연 <span>Flutter Developer</span></h4>
+          <p>irongugo@gmail.com</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 5 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/kimsuchan.jpg');"></div>
+        <div class="member-info">
+          <h4>김수찬 <span>Backend Developer</span></h4>
+          <p>8216kimsc@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 6 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/leejiyun.jpg');"></div>
+        <div class="member-info">
+          <h4>이지윤 <span>Product Designer</span></h4>
+          <p>Jiyun627@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 7 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/kimminhyuk.jpg');"></div>
+        <div class="member-info">
+          <h4>김민혁 <span>Partnership Manager</span></h4>
+          <p>kimkami0821@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 8 -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/songyeonwoo.jpg');"></div>
+        <div class="member-info">
+          <h4>송연우 <span>Operations Manager</span></h4>
+          <p>linasong123@yonsei.ac.kr</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+      <!-- Team Member 9 (추가) -->
+      <div class="team-member">
+        <div class="profile-pic" style="background-image:url('team_photos/jojaemin.jpg');"></div>
+        <div class="member-info">
+          <h4>조재민 <span>Flutter Developer</span></h4>
+          <p>jaemdeu@gmail.com</p>
+          <!-- 링크 없음 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: JOIN US & CONTACT -->
+  <section id="join" class="section-animate">
+    <h2>함께 성장할 당신을 기다립니다</h2>
+    <div class="join-content">
+      <div class="join-unified">
+        <h3>채용 및 협업, 투자 문의</h3>
+        <p>함께 문제를 해결하고, 의미 있는 성장을 이루고 싶은 분, 그리고 우리의 여정에 관심 있는 모든 분을 환영합니다.<br>
+        채용, 협업, 투자 등 다양한 문의는 언제든 아래 메일로 연락해 주세요.</p>
+        <a href="mailto:futurevel.kr@gmail.com" class="join-btn">문의하기: futurevel.kr@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FOOTER -->
+  <footer>
+    <div class="footer-content footer-flex">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="futurevel_logo.svg" alt="FUTUREVEL 로고" style="height:32px;vertical-align:middle;display:inline-block;margin-bottom:8px;">
+        </div>
+        <span class="footer-address-small">
+          강원특별자치도 원주시 연세대길 1 컨버젼스 홀 201-5호 (문의 : <a href="mailto:futurevel.kr@gmail.com" style="color:#00c6fb;text-decoration:underline;">futurevel.kr@gmail.com</a>)
+        </span>
+        <span class="footer-copy-small">© 2025 FUTUREVEL. All Rights Reserved.</span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://github.com/FUTUREVEL" title="GitHub" class="footer-icon" target="_blank" rel="noopener"><svg width="24" height="24" fill="currentColor"><use href="#github-icon"/></svg></a>
+          <a href="#" title="Blog" class="footer-icon"><svg width="24" height="24" fill="currentColor"><use href="#blog-icon"/></svg></a>
+          <a href="https://www.linkedin.com/company/futurevel" title="LinkedIn" class="footer-icon" target="_blank" rel="noopener"><svg width="24" height="24" fill="currentColor"><use href="#linkedin-icon"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <svg style="display:none;">
+      <symbol id="github-icon" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></symbol>
+      <symbol id="blog-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="linkedin-icon" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></symbol>
+    </svg>
+  </footer>
+</body>
+</html> 
