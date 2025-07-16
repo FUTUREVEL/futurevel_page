@@ -522,12 +522,40 @@ footer {
 @media (max-width: 700px) {
   .footer-flex {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* 중앙 정렬로 변경 */
     gap: 18px;
+    text-align: center; /* 텍스트도 중앙 정렬 */
+  }
+  .footer-left {
+    align-items: center; /* 중앙 정렬 */
+    width: 100%;
   }
   .footer-right {
     margin-left: 0;
-    align-items: flex-start;
+    align-items: center; /* 중앙 정렬 */
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-logo {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-links {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .footer-address-small, .footer-copy-small {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    word-break: keep-all;
   }
 }
 
@@ -585,6 +613,16 @@ footer {
   font-size: 0.93em;
   margin-bottom: 0;
   display: block;
+}
+
+.footer-contact-mobile {
+  display: inline;
+}
+@media (max-width: 700px) {
+  .footer-contact-mobile {
+    display: block;
+    margin-top: 4px;
+  }
 }
 
 @media (max-width: 700px) {
